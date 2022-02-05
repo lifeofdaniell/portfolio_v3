@@ -17,6 +17,7 @@
       rel="stylesheet"
       type="text/css"
     />
+    <link rel="stylesheet" href="css/locomotivescroll.css" />
     <script type="text/javascript">
       !(function (o, c) {
         var n = c.documentElement,
@@ -34,10 +35,20 @@
         display: none;
       }
       .loader {
-        /* display: none; */
         transition: opacity 400ms ease;
       }
-      .home-container::before {
+      .noise {
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100vh;
+        pointer-events: none;
+      }
+      .noise::before {
         content: '';
         z-index: 10;
         position: absolute;
@@ -90,6 +101,7 @@
       <div class="loader-percentage"></div>
       <div class="progress-bar"></div>
     </div>
+    <div class="noise"></div>
     <div class="page-wrapper">
       <div class="nav">
         <div class="nav-inner">
