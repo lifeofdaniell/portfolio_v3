@@ -400,5 +400,27 @@
     ></script>
     <script src="../js/index.js"></script>
     <script src="../js/webflow.js" type="text/javascript"></script>
+    <script>
+      function isMobile(x) {
+        if (x.matches) {
+          document
+            .querySelector('.project-detail-block')
+            .removeAttribute('data-scroll-sticky')
+          document
+            .querySelector('.project-detail-block')
+            .removeAttribute('data-scroll-target')
+        } else {
+          document
+            .querySelector('.project-detail-block')
+            .setAttribute('data-scroll-sticky', '')
+          document
+            .querySelector('.project-detail-block')
+            .setAttribute('data-scroll-target', '#container')
+        }
+      }
+      var x = window.matchMedia('(max-width: 767px)')
+      isMobile(x) // Call listener function at run time
+      x.addListener(isMobile) // Attach listener function on state changes
+    </script>
   </body>
 </html>

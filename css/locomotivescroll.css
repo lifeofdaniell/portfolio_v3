@@ -42,6 +42,12 @@ html.has-scroll-dragging {
   transition: transform 0.3s, opacity 0.3s;
   opacity: 0; 
   }
+  @media screen and (max-width: 767px) {
+    .c-scrollbar {
+      display: none;
+      width: 2px;
+    }
+  }
   .c-scrollbar:hover {
     transform: scaleX(1.45); }
   .c-scrollbar:hover, .has-scroll-scrolling .c-scrollbar, .has-scroll-dragging .c-scrollbar {
