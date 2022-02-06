@@ -1,2 +1,6 @@
-export { default as fadeIn } from './fadeIn'
-export { default as fadeOut } from './fadeOut'
+export { default as homeReveal } from './homeReveal'
+export { default as homeToPage } from './homeToPage'
+export { default as skillReveal } from './skillReveal'
+export { default as skillToPage } from './skillToPage'
+export { default as aboutReveal } from './aboutReveal'
+export { default as aboutToPage } from './aboutToPage'

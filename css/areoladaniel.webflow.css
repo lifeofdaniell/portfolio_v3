@@ -1446,11 +1446,11 @@ h4 {
   }
 
   .skill-block.title {
-    margin-bottom: 5px;
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
+    margin-bottom: 30px;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
     font-size: 20px;
     letter-spacing: -1px;
   }
