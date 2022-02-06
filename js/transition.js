@@ -46,6 +46,7 @@ barba.init({
       to: { namespace: ['web', 'photography', 'mobile'] },
       leave: (data) => homeToPage(data.current),
       enter ({ next }) {
+        scroll.update();
         skillReveal()
       }
     },
@@ -64,6 +65,7 @@ barba.init({
       to: { namespace: 'about' },
       leave: (data) => homeToPage(data.current),
       enter ({ next }) {
+        scroll.update();
         aboutReveal()
       }
     },
@@ -82,6 +84,7 @@ barba.init({
       to: { namespace: ['web', 'photography', 'mobile']  },
       leave: (data) => aboutToPage(data.current),
       enter ({ next }) {
+        scroll.update();
          skillReveal()
       }
     },
@@ -91,6 +94,7 @@ barba.init({
       to: { namespace: 'about' },
       leave: (data) => skillToPage(data.current),
       enter ({ next }) {
+        scroll.update();
          aboutReveal()
       }
     },
@@ -100,6 +104,7 @@ barba.init({
       to: { namespace: ['web', 'photography', 'mobile'] },
       leave: (data) => skillToPage(data.current),
       enter ({ next }) {
+        scroll.update();
          skillReveal()
       }
     },

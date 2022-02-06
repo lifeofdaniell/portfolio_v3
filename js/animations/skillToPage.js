@@ -7,19 +7,13 @@ const skillToPage = (container) => {
     autoAlpha: 0,
     ease: 'power1.out',
   })
-   tl.to('.stack-header', {
+  tl.to('.stack-header', {
+    //  y: 10,
     autoAlpha: 0,
     ease: 'power1.out',
   }, '<')
   tl.to('.stack-item', {
-    autoAlpha: 0,
-    ease: 'power1.out',
-    stagger: {
-      each: 0.1
-    }
-  }, '<')
-  tl.to('.project-link', {
-    x: -100,
+    // y: 10,
     autoAlpha: 0,
     ease: 'power1.out',
     stagger: {
@@ -27,6 +21,14 @@ const skillToPage = (container) => {
     }
   }, '<')
   tl.to('.skill-block.small', {
+    x: -100,
+    autoAlpha: 0,
+    ease: 'power1.out',
+    stagger: {
+      each: 0.1
+    }
+  }, '<')
+  tl.to('.project-link', {
     x: -100,
     autoAlpha: 0,
     ease: 'power1.out',
