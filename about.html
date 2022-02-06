@@ -90,35 +90,25 @@
       }
     </style>
   </head>
-  <body>
+  <body data-barba="wrapper">
     <div class="noise"></div>
-    <div class="nav about">
-      <a href="index.html" class="name-logo about w-inline-block">
-        <div>.ad</div>
-      </a>
-      <div class="hover-dot"></div>
-      <div class="copyright-text w-embed w-script">
-        Copyright ©
-        <script type="text/javascript">
-          document.write(new Date().getFullYear())
-        </script>
-        Areola Daniel. All rights reserved.
-      </div>
+
+    <div class="nav">
       <div class="nav-inner">
         <div class="nav-block">
           <div>Lagos, Nigeria.</div>
           <div class="name">areola daniel</div>
         </div>
         <div class="nav-link-wrapper">
-          <a href="index.html" class="sub-nav-link w-inline-block">
-            <div class="link-number"><strong>00</strong></div>
-            <div>home</div>
-          </a>
           <a
-            href="about.html"
+            href="index.html"
             aria-current="page"
             class="sub-nav-link w-inline-block w--current"
           >
+            <div class="link-number"><strong>00</strong></div>
+            <div>home</div>
+          </a>
+          <a href="about.html" class="sub-nav-link w-inline-block">
             <div class="link-number"><strong>01</strong></div>
             <div>about</div>
           </a>
@@ -155,10 +145,33 @@
           </a>
         </div>
       </div>
+
+      <a
+        href="index.html"
+        aria-current="page"
+        class="name-logo w-inline-block w--current"
+      >
+        <div>.ad</div>
+      </a>
+
+      <div class="hover-dot"></div>
+
+      <div class="copyright-text w-embed w-script">
+        Copyright ©
+        <script type="text/javascript">
+          document.write(new Date().getFullYear())
+        </script>
+        Areola Daniel. All rights reserved.
+      </div>
     </div>
+
     <div data-scroll-container>
-      <div class="home-container about">
-        <div class="bio-wrapper">
+      <div
+        data-barba="container"
+        data-barba-namespace="about"
+        class="home-container about"
+      >
+        <div id="bio-container" class="bio-wrapper">
           <div class="bio-inner">
             <div class="bio-header-block">
               <h1 class="no-margin">
@@ -231,18 +244,24 @@
               </div>
             </div>
           </div>
-          <div class="bio-inner dummy"></div>
+          <div
+            data-scroll
+            data-scroll-sticky
+            data-scroll-target="#bio-container"
+            class="sticky"
+          >
+            <div class="bio-inner last">
+              <div class="bio-image-block">
+                <img
+                  src="https://res.cloudinary.com/areoladaniel-com/image/upload/v1644053260/V3_Portfolio/Wallpaper_lwlrrj.jpg"
+                  loading="eager"
+                  alt=""
+                  class="bio-image"
+                />
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="bio-inner last">
-      <div class="bio-image-block">
-        <img
-          src="https://res.cloudinary.com/areoladaniel-com/image/upload/v1644053260/V3_Portfolio/Wallpaper_lwlrrj.jpg"
-          loading="eager"
-          alt=""
-          class="bio-image"
-        />
       </div>
     </div>
 
@@ -252,7 +271,9 @@
       integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
       crossorigin="anonymous"
     ></script>
-    <script src="js/index.js"></script>
+
     <script src="js/webflow.js" type="text/javascript"></script>
+    <script src="js/index.js"></script>
+    <script src="/js/transition.js"></script>
   </body>
 </html>

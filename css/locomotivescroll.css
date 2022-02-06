@@ -41,6 +41,7 @@ html.has-scroll-dragging {
   transform-origin: center right;
   transition: transform 0.3s, opacity 0.3s;
   opacity: 0; 
+  display: none;
   }
   @media screen and (max-width: 767px) {
     .c-scrollbar {

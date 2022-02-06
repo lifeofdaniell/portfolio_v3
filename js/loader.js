@@ -78,19 +78,18 @@
 })()
 
 document.addEventListener('DOMContentLoaded', function () {
-  let pageWrapper = document.querySelector('.page-wrapper')
+  // let pageWrapper = document.querySelector('.page-wrapper')
   let loaderOverlay = document.querySelector('.loader')
-  // let seenLoader = localStorage.getItem('seenLoader')
   let seenLoader = Cookies.get('seenLoader')
   if (!seenLoader) {
     loaderOverlay.style.display = 'flex'
-    setTimeout(() => {
-      pageWrapper.style.display = 'block'
-    }, 800);
+    // setTimeout(() => {
+    //   pageWrapper.style.display = 'block'
+    // }, 800);
     Cookies.set('seenLoader', 1, {expires: 1})
   } else {
     loaderOverlay.style.visibility = 'hidden'
-    pageWrapper.style.display = 'block'
+    // pageWrapper.style.display = 'block'
   }
 })
 /* 
