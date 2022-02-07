@@ -2,15 +2,22 @@ import gsap from 'gsap';
 
 const aboutToPage = (container) => {
   const tl = gsap.timeline({})
+   tl.to('.bio-subtext-wrapper', {
+    y: 50,
+    autoAlpha: 0,
+    ease: 'power1.out',
+    duration: 0.5,
+   }, )
+  
     tl.to('.bio-text-wrapper', {
-    y: 100,
+    y: 50,
     autoAlpha: 0,
     ease: 'power1.out',
     duration: 1,
-    })
+    }, '<')
   
     tl.to('.bio-header-block', {
-    y: 100,
+    y: 50,
     autoAlpha: 0,
     ease: 'power1.out',
     duration: 0.75,
@@ -24,20 +31,15 @@ const aboutToPage = (container) => {
     ease: 'power1.out',
   }, '<')
   
-    tl.to('.bio-subtext-wrapper', {
-    y: 100,
-    autoAlpha: 0,
-    ease: 'power1.out',
-    duration: 0.5,
-  }, '<')
+   
     tl.to('.service-header', {
-    y: 10,
+    y: 50,
     autoAlpha: 0,
     ease: 'power1.out',
     duration: 0.5,
   }, '<')
     tl.to('.service-item', {
-    y: 10,
+    y: 50,
     autoAlpha: 0,
     ease: 'power1.out',
     duration: 0.5,
@@ -46,13 +48,13 @@ const aboutToPage = (container) => {
     } */
     }, '<')
      tl.to('.role-header', {
-    y: 10,
+    y: 50,
     autoAlpha: 0,
     ease: 'power1.out',
     duration: 0.5,
   }, '<')
     tl.to('.role-item', {
-    y: 10,
+    y: 50,
     autoAlpha: 0,
     ease: 'power1.out',
     duration: 0.5,

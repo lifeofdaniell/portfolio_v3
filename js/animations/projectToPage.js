@@ -46,12 +46,12 @@ const projectToPage = (container) => {
         tl.to(
         '.photo-block',
         {
-          y: 150,
+          // y: 150,
           autoAlpha: 0,
           ease: 'power1.out',
           duration: 0.5,
           stagger: {
-            each: 0.2
+            each: 0.1
           }
         },
         '<'
@@ -67,7 +67,7 @@ const projectToPage = (container) => {
     autoAlpha: 0,
     duration: 0.5,
     ease: 'power1.out',
-  }, '<')
+  }, '<+0.2')
 
   tl.to(
     '.next-link',
