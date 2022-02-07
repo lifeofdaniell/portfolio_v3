@@ -67,7 +67,7 @@ h4 {
   top: auto;
   right: 0%;
   bottom: 0%;
-  z-index: 2;
+  z-index: 10;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -640,6 +640,7 @@ h4 {
   display: -ms-flexbox;
   display: flex;
   max-width: 350px;
+  min-height: 65vh;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -649,6 +650,7 @@ h4 {
   -webkit-align-items: flex-start;
   -ms-flex-align: start;
   align-items: flex-start;
+  justify-content: space-between;
 }
 
 .photo-block {
@@ -805,6 +807,10 @@ h4 {
   left: 5vw;
   bottom: 25vh;
   z-index: 3;
+}
+
+.fixed-link-wrapper.photos {
+  position: static;
 }
 
 .fixed-link-wrapper.photos.mobile {
@@ -1261,6 +1267,7 @@ h4 {
     position: static;
     width: 100%;
     max-width: none;
+    min-height: 0px;
     margin-right: 0vw;
     margin-bottom: 30px;
   }

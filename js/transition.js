@@ -1,6 +1,15 @@
 import barba from '@barba/core';
 // import gsap from 'gsap'
-import { homeReveal, homeToPage, skillReveal, skillToPage, aboutReveal, aboutToPage } from "./animations";
+import {
+  homeReveal,
+  homeToPage,
+  skillReveal,
+  skillToPage,
+  aboutReveal,
+  aboutToPage,
+  projectReveal,
+  projectToPage
+} from "./animations";
 import LocomotiveScroll from 'locomotive-scroll'
 
 let scroll
@@ -36,6 +45,14 @@ barba.init({
       to: { namespace: ['about'] },
       once ({ next }) {
           aboutReveal()
+          initLocoScroll()
+      },
+    },
+    {
+      name: 'Project Reveal',
+      to: { namespace: ['btm', 'events', 'portraits', 'stills'] },
+      once ({ next }) {
+          projectReveal()
           initLocoScroll()
       },
     },
@@ -101,12 +118,98 @@ barba.init({
     {
       name: 'Skill to Skill',
       from: { namespace: ['web', 'photography', 'mobile']  },
-      to: { namespace: ['web', 'photography', 'mobile'] },
+      to: { namespace: ['web', 'photography', 'mobile']  },
       leave: (data) => skillToPage(data.current),
       enter ({ next }) {
         scroll.update();
          skillReveal()
       }
+    },
+    {
+      name: 'Skill to Project',
+      from: { namespace:  'photography' },
+      to: { namespace: ['btm', 'events', 'portraits', 'stills'] },
+      leave: (data) => skillToPage(data.current),
+      enter ({ next }) {
+        scroll.update()
+        initLocoScroll()
+        projectReveal()
+        // initLocoScroll()
+      },
+      beforeEnter() {
+				scroll.setScroll(0,0);
+			}
+    },
+    {
+      name: 'Project to Project',
+      from: { namespace: ['btm', 'events', 'portraits', 'stills'] },
+      to: { namespace: ['btm', 'events', 'portraits', 'stills'] },
+      leave: (data) => projectToPage(data.current),
+      enter ({ next }) {
+        scroll.update();
+        initLocoScroll()
+        projectReveal()
+        // initLocoScroll()
+      },
+      beforeEnter() {
+				scroll.setScroll(0,0);
+			}
+    },
+    {
+      name: 'Project to Home',
+      from: { namespace: ['btm', 'events', 'portraits', 'stills'] },
+      to: { namespace: 'home' },
+      leave: (data) => projectToPage(data.current),
+      enter ({ next }) {
+        homeReveal()
+      },
+    },
+    {
+      name: 'Project to About',
+      from: { namespace: ['btm', 'events', 'portraits', 'stills'] },
+      to: { namespace: 'about' },
+      leave: (data) => projectToPage(data.current),
+      enter ({ next }) {
+        aboutReveal()
+        // initLocoScroll()
+      },
+      beforeEnter() {
+				scroll.setScroll(0,0);
+			}
+    },
+    {
+      name: 'Project to Skill',
+      from: { namespace: ['btm', 'events', 'portraits', 'stills'] },
+      to: { namespace:  'photography' },
+      leave: (data) => projectToPage(data.current),
+      enter ({ next }) {
+        skillReveal()
+      },
+    },
+    {
+      name: 'Home to Project',
+      from: { namespace: 'home' },
+      to: { namespace:['btm', 'events', 'portraits', 'stills']  },
+      leave: (data) => homeToPage(data.current),
+      enter ({ next }) {
+        scroll.update();
+        initLocoScroll()
+        projectReveal()
+      }
+    },
+    {
+      name: 'About to Project',
+      from: { namespace: 'about' },
+      to: { namespace:['btm', 'events', 'portraits', 'stills']  },
+      leave: (data) => aboutToPage(data.current),
+      enter ({ next }) {
+        scroll.update();
+        initLocoScroll()
+        projectReveal()
+      },
+       beforeEnter() {
+				scroll.setScroll(0,0);
+			}
     },
   ]
 });
