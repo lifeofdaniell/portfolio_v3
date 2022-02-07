@@ -223,4 +223,15 @@ barba.init({
     multiplier: 0.65,
     lerp: 0.075,
   });
-}
+ }
+
+   function isMobile(x) {
+    if (x.matches) {
+    
+    } else {
+      
+    }
+  }
+  var x = window.matchMedia('(max-width: 767px)')
+  isMobile(x) // Call listener function at run time
+  x.addListener(isMobile) // Attach listener function on state changes
