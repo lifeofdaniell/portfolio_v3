@@ -1393,7 +1393,12 @@ h4 {
 }
 
 @media screen and (max-width: 479px) {
- 
+  .loader {
+    padding-bottom: 25vh;
+  }
+.progress-bar{
+    bottom: 20vh;
+}
 .skills-wrapper {
   display: flex;
   flex-direction: column;
