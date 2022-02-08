@@ -1461,6 +1461,7 @@ h4 {
   }
 
   .skill-block.title {
+    margin-left: auto;
     margin-bottom: 30px;
     -webkit-box-pack: end;
     -webkit-justify-content: flex-end;
@@ -1476,6 +1477,7 @@ h4 {
   }
 
   .skill-block.title.active {
+      margin-left: 0px;
     margin-bottom: 5px;
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
