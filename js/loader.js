@@ -4,6 +4,8 @@
     let loaderProgress = document.querySelector('.progress-bar')
     let loaderPercent = document.querySelector('.loader-percentage')
     img = [
+      'https://res.cloudinary.com/areoladaniel-com/image/upload/v1644401377/V3_Portfolio/wallpaper-image-cropped_jzuf1w.jpg',
+      'https://res.cloudinary.com/areoladaniel-com/image/upload/v1644400250/V3_Portfolio/wallpaper-image_n3ivlt.jpg',
       'https://res.cloudinary.com/areoladaniel-com/image/upload/v1644053260/V3_Portfolio/Wallpaper_lwlrrj.jpg',
       'https://res.cloudinary.com/areoladaniel-com/image/upload/v1644097569/V3_Portfolio/BM-14_uzsmbm.jpg',
       'https://res.cloudinary.com/areoladaniel-com/image/upload/v1644097570/V3_Portfolio/BTM_10_qykujz.jpg',
