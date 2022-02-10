@@ -51,15 +51,15 @@
       'https://res.cloudinary.com/areoladaniel-com/image/upload/v1644053256/V3_Portfolio/Stills_5_ii6elh.jpg',
       'https://res.cloudinary.com/areoladaniel-com/image/upload/v1644053257/V3_Portfolio/Stills_6_o1chfb.jpg',
     ]
-    c = 0
+    imagesLoaded = 0
     totalImages = img.length
 
     function imgLoaded() {
-      c += 1
-      let percent = (((100 / totalImages) * c) << 0) + '%'
+      imagesLoaded += 1
+      let percent = (((100 / totalImages) * imagesLoaded) << 0) + '%'
       loaderProgress.style.width = percent
       loaderPercent.textContent = percent
-      if (c === totalImages) return doneLoading()
+      if (imagesLoaded === totalImages) return doneLoading()
     }
     function doneLoading() {
       setTimeout(function () {
@@ -69,8 +69,8 @@
         loaderOverlay.style.display = 'none'
       }, 1300)
     }
-    for (var i = 0; i < totalImages; i++) {
-      var tImg = new Image()
+    for (let i = 0; i < totalImages; i++) {
+      let tImg = new Image()
       tImg.onload = imgLoaded
       tImg.onerror = imgLoaded
       tImg.src = img[i]
@@ -80,25 +80,15 @@
 })()
 
 document.addEventListener('DOMContentLoaded', function () {
-  // let pageWrapper = document.querySelector('.page-wrapper')
   let loaderOverlay = document.querySelector('.loader')
   let seenLoader = Cookies.get('seenLoader')
   if (!seenLoader) {
     loaderOverlay.style.display = 'flex'
-    // setTimeout(() => {
-    //   pageWrapper.style.display = 'block'
-    // }, 800);
     Cookies.set('seenLoader', 1, {expires: 1})
   } else {
     loaderOverlay.style.visibility = 'hidden'
-    // pageWrapper.style.display = 'block'
   }
 })
-/* 
-document.addEventListener('keydown', function (event) {
-  if (event.metaKey && event.shiftKey && event.key === 'r') {
-    localStorage.clear()
-  }
-}) */
+
 
 
