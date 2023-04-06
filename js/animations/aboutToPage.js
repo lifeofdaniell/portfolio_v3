@@ -24,8 +24,8 @@ const aboutToPage = (container) => {
     }, '<+0.15')
   
     tl.to('.bio-inner.last', {
-    x: '50vw',
-    rotate: -80,
+    // x: '50vw',
+    // rotate: -80,
     autoAlpha: 0,
     duration: 1,
     ease: 'power1.out',

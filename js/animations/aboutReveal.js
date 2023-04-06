@@ -10,10 +10,10 @@ const aboutReveal = (container) => {
     clearProps: 'all',
     })
     tl.from('.bio-inner.last', {
-    x: '50vw',
-    rotate: -80,
+    // x: '50vw',
+    // rotate: -80,
     autoAlpha: 0,
-    duration: 1.5,
+    duration: 1,
     ease: 'power1.out',
     clearProps: 'all',
   }, '<')
