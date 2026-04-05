@@ -3,7 +3,7 @@
     let loaderOverlay = document.querySelector('.loader')
     let loaderProgress = document.querySelector('.progress-bar')
     let loaderPercent = document.querySelector('.loader-percentage')
-    img = [
+    const img = [
       'https://res.cloudinary.com/areoladaniel-com/image/upload/v1644401377/V3_Portfolio/wallpaper-image-cropped_jzuf1w.jpg',
       'https://res.cloudinary.com/areoladaniel-com/image/upload/v1644400250/V3_Portfolio/wallpaper-image_n3ivlt.jpg',
       'https://res.cloudinary.com/areoladaniel-com/image/upload/v1644053260/V3_Portfolio/Wallpaper_lwlrrj.jpg',
@@ -51,8 +51,8 @@
       'https://res.cloudinary.com/areoladaniel-com/image/upload/v1644053256/V3_Portfolio/Stills_5_ii6elh.jpg',
       'https://res.cloudinary.com/areoladaniel-com/image/upload/v1644053257/V3_Portfolio/Stills_6_o1chfb.jpg',
     ]
-    imagesLoaded = 0
-    totalImages = img.length
+    let imagesLoaded = 0
+    let totalImages = img.length
 
     function imgLoaded() {
       imagesLoaded += 1
